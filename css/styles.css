@@ -1,0 +1,278 @@
+/*============RESPONSIVE POR DEFECTO============*/
+body {
+    margin: 0;
+    padding: 0;
+    font-size: large;
+    font-family: 'MedievalSharp'; 
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/*======== Header ========*/
+header {
+    background-color: #851313; 
+    color: #fff;
+    display: flex;
+    padding: 20px;
+    flex-direction: column; 
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Uncial Antiqua'; 
+    font-size: 2.5em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'MedievalSharp';
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #F1C40F;
+    transform: scale(1.2);
+}
+
+/*======== Main ========*/
+main {
+    max-width: 1500px;
+    margin: auto;
+}
+
+/*======== Títulos ========*/
+h2 {
+    color: #C0392B; 
+    margin-bottom: 15px;
+    font-family: 'Uncial Antiqua';
+    font-size: 2em;
+}
+
+/*======== Contenido ========*/
+.contenido{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+    gap: 20px;
+}
+
+.texto{
+    flex: 1;   
+}
+
+/*======== Imágenes ========*/
+.img-principal {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.img-normal{
+    max-width: 50%;
+}
+
+.img-normal img {
+    width: 100%;
+    height: auto;
+}
+
+.img-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.img-galeria img {
+    width: 250px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.img-galeria img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/*======== Redes Sociales ========*/
+.redes-sociales {
+    display: flex;
+    gap: 15px; 
+}
+
+.redes-sociales img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.redes-sociales img:hover {
+    transform: scale(1.2);
+}
+
+/*======== Botones ========*/
+button, .btn {
+    background-color: #E67E22; 
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: 'MedievalSharp';
+}
+
+button:hover, .btn:hover {
+    background-color: #F1C40F; 
+    color: #000;
+}
+
+/*======== Footer ========*/
+footer {
+    background-color: #851313; 
+    color: #fff;
+    padding: 20px 40px;
+    font-family: 'MedievalSharp';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+
+/*============RESPONSIVE PARA TABLET============*/
+
+@media (max-width: 1024px) {
+
+    main {
+        max-width: 1100px;
+        padding: 10px;
+    }
+
+    .contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img-normal {
+        max-width: 70%;
+        margin: auto;
+    }
+        .img-principal {
+        max-width: 60%;  
+        height: auto;
+        margin: 15px auto;
+    }
+
+    .img-principal img {
+        width: 100%;
+        height: auto;
+    }
+
+    nav a {
+        margin: 10px;
+        font-size: 1.1em;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+}
+
+/*============RESPONSIVE PARA MÓVIL============*/
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 1em;
+    }
+
+    .contenido {
+        flex-direction: column;
+        text-align: center ;
+    }
+
+    .texto {
+        width: 100%;
+    }
+
+    .img-normal {
+        max-width: 90%;
+        margin: auto;
+    }
+
+
+    .img-principal {
+        max-width: 80%;     
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .img-principal img {
+        width: 100%;
+        height: auto;
+    }
+
+    .redes-sociales {
+        max-width: 50%;
+        margin: auto;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    button, .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
